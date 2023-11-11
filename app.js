@@ -2,8 +2,13 @@ const express = require('express');
 
 const app = express();
 
+
 app.get('/', (req, res) => {
-    res.json({ message: 'Backend Running...' })
+    res.send('Backend is running...');
 });
 
-app.listen(3000);
+const port = 3000;
+
+app.listen(port, () => {
+    console.log(`listening on port http://localhost:${port}`);
+});
